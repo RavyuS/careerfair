@@ -3,3 +3,4 @@ node_modules/
 build/
 
 credentials/ravyu_aws_creds.csv
+credentials/serverless-admin_accessKeys.csv
