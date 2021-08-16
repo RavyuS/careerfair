@@ -13,6 +13,13 @@ h1 {
   color: #13294b;
 }
 
+.calendar{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .interview-list {
   margin-left: auto;
   margin-right: auto;
@@ -94,6 +101,9 @@ nav img {
     z-index: 20;
     padding-top: 15%;
   }
+
+  
+
   td {
     padding: 20px;
   }
