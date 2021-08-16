@@ -26,7 +26,7 @@ function App() {
       </nav>
       <PageHeader />
       <Information />
-      <EXPOCalendar />
+      {/* <EXPOCalendar /> */}
       <Days />
       <Virtual />
       <Footer />
