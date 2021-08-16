@@ -1,26 +1,21 @@
 import React from "react";
 
-class Days extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function Days(props){
+  return (
+          <div className="days">
+            <h2 id="content_header">Day Information</h2>
+            <div className="info">
+            This semester's career fair will have one day for full time positions, and one day for internships.
+            Below are the CareerEco links to the fair information as well as which companies will be attending.
+            </div>
+    
+            <a href="https://illinois.joinhandshake.com/career_fairs/23691"> September 8th: <br/> Internship</a>
+            <a href="https://illinois.joinhandshake.com/career_fairs/23673?ref=events-search"> September 15th: <br/> Full-time Employement</a>
+            {/* <a href="https://careereco.com/Fair/Schedule?fairId=49c73a49-7ec5-419b-a8f3-abf401828800">Company List</a> */}
+    
+          </div>
+        );
 
-  render() {
-    return (
-      <div className="days">
-        <h2 id="content_header">Day Information</h2>
-        <div className="info">
-        This semester's career fair will have one day for full time positions, and one day for internships.
-        Below are the CareerEco links to the fair information as well as which companies will be attending.
-        </div>
-
-        <a href="https://illinois.joinhandshake.com/career_fairs/23691"> September 8th: <br/> Internship</a>
-        <a href="https://illinois.joinhandshake.com/career_fairs/23673?ref=events-search"> September 15th: <br/> Full-time Employement</a>
-        {/* <a href="https://careereco.com/Fair/Schedule?fairId=49c73a49-7ec5-419b-a8f3-abf401828800">Company List</a> */}
-
-      </div>
-    );
-  }
 }
 
 export default Days;
