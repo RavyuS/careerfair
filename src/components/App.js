@@ -7,7 +7,7 @@ import Days from "./Days";
 import Information from "./Information";
 import Footer from "./Footer";
 import EXPOCalendar from "./Calendar";
-import 'react-big-calendar/lib/css/react-big-calendar.css'
+
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       </nav>
       <PageHeader />
       <Information />
-      {/* <EXPOCalendar /> */}
+      <EXPOCalendar />
       <Days />
       <Virtual />
       <Footer />

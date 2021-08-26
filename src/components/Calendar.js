@@ -2,19 +2,23 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 const localizer = momentLocalizer(moment);
 
 const REQUEST_URL = "https://www.googleapis.com/calendar/v3/calendars/c_7l6dmgacgec619n8akak8irvsg@group.calendar.google.com/events?key=AIzaSyAX-0VgUVQzsnp30HS-pmQERdJ6nacigFU"
 var SYNC_TOKEN = ""
 
+
 function EXPOCalendar(props){
     
     const [events,setEvents] = useState([]);
+    const [isBusy,setBusy] = useState(true)
     // var events = []
     useEffect(() => {
         
         axios.get(REQUEST_URL + SYNC_TOKEN).then((res) => {
+            
             if(SYNC_TOKEN === ""){
                 SYNC_TOKEN = res.data.nextSyncToken
             }
@@ -41,25 +45,28 @@ function EXPOCalendar(props){
                 
             }
             setEvents(tmp_events);
-            // events = tmp_events
+            setBusy(false)
+            
 
         })
         
     });
 
     return(
-        <div className="calendar">
-            <Calendar
-            localizer={localizer}
-            events={events}
-            style={{ minHeight: 300, maxWidth: 600 }}
-            defaultDate={new Date(2021, 8, 1)}
-            views={['month', 'agenda']}
-            // components={{
-            //     timeSlotWrapper: ColoredDateCellWrapper,
-            //   }}
-            
-        />
+        <div>
+            <h1 id="content_header">Calendar</h1>
+            {
+                isBusy ? (<div>loading..</div>)
+                : 
+                (<Calendar
+                    localizer={localizer}
+                    events={events}
+                    style={{ minHeight: 300, maxWidth: 600, margin: "auto" }}
+                    defaultDate={new Date(2021, 8, 1)}
+                    views={['month', 'agenda']}
+                    toolbar={false}
+                />)
+            }
         </div>
     )
 
