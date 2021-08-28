@@ -148,6 +148,18 @@ nav img {
     text-align: center;
     margin-bottom: 1%;
   }
+
+  .calendar a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 40%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 1%;
+  }
 }
 
 /* mobile */
@@ -220,6 +232,18 @@ nav img {
     text-align: center;
     margin-bottom: 5%;
   }
+
+  .calendar a {
+    border: #13294b solid 2px;
+    color: #13294b;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0px 10%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+  }
 }
 
 .temp {
@@ -280,6 +304,10 @@ svg {
   width: 70%;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 1em;
+}
+
+.calendar-info {
+  padding-bottom: 2em;
 }
 
 h2 {

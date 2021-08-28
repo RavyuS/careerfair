@@ -54,19 +54,24 @@ function EXPOCalendar(props){
 
     return(
         <div>
-            <h1 id="content_header">Calendar</h1>
-            {
-                isBusy ? (<div>loading..</div>)
-                : 
-                (<Calendar
-                    localizer={localizer}
-                    events={events}
-                    style={{ minHeight: 300, maxWidth: 600, margin: "auto" }}
-                    defaultDate={new Date(2021, 8, 1)}
-                    views={['month', 'agenda']}
-                    toolbar={false}
-                />)
-            }
+            <div className='calendar-info'>
+                <h1 id="content_header">Calendar</h1>
+                {
+                    isBusy ? (<div>loading..</div>)
+                    : 
+                    (<Calendar
+                        localizer={localizer}
+                        events={events}
+                        style={{ minHeight: 300, maxWidth: 600, margin: "auto" }}
+                        defaultDate={new Date(2021, 8, 1)}
+                        views={['month', 'agenda']}
+                        toolbar={false}
+                    />)
+                }
+            </div>
+            <div className='calendar'>
+                <a href="https://calendar.google.com/calendar/embed?src=c_7l6dmgacgec619n8akak8irvsg%40group.calendar.google.com&ctz=America%2FChicago"> Google Calendar</a>
+            </div>
         </div>
     )
 
